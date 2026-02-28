@@ -22,7 +22,9 @@ import type {
   FormaTexClientOptions,
 } from "./types.js";
 
-export const DEFAULT_BASE_URL = "https://api.formatex.io";
+export const DEFAULT_BASE_URL: string =
+  (typeof process !== "undefined" && process.env?.FORMATEX_BASE_URL) ||
+  "https://api.formatex.io";
 
 /**
  * Build a companion-file entry for multi-file compilation.

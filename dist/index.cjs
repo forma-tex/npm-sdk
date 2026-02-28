@@ -42,7 +42,7 @@ var PlanLimitError = class extends FormaTexError {
 };
 
 // src/client.ts
-var DEFAULT_BASE_URL = "https://api.formatex.io";
+var DEFAULT_BASE_URL = typeof process !== "undefined" && process.env?.FORMATEX_BASE_URL || "https://api.formatex.io";
 function fileEntry(name, content) {
   if (Buffer.isBuffer(content)) {
     return { name, content: content.toString("base64") };

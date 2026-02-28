@@ -114,7 +114,7 @@ interface FormaTexClientOptions {
     timeout?: number;
 }
 
-declare const DEFAULT_BASE_URL = "https://api.formatex.io";
+declare const DEFAULT_BASE_URL: string;
 /**
  * Build a companion-file entry for multi-file compilation.
  *
